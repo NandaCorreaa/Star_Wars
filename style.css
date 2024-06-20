@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family: "Open Sans", sans-serif;
 }
+
+/* PRIMEIRA SESSÃO: Título e Imagem Principal */
 
 .primeiraSessao {
     height: 85vh;
@@ -50,6 +53,22 @@
     justify-content: end;
     align-items: center;
 }
+
+@media (max-width: 768px){
+    .primeiraSessao {
+        height: 30vh;
+    }
+    .kyloRen {
+        top: 2%;
+    }
+    .crieLegiao{
+        width: 15VW;
+    }
+}
+
+/* SEGUNDA SESSÃO: Informações sobre o jogo */
+
+/* Primeira parte */
 
 .segundaSessao {
     background-image: url("./Assets/fundoSessao2.png");
@@ -153,8 +172,104 @@
     border-bottom: solid 5px #707070;
     border-radius: 5px;
     width: 100%;
-    color: #707070;
+    color: transparent;
 }
+
+@media (max-width: 768px) {
+    .segundaSessao{
+        height: 160vh;
+        background-position: top left;
+    }
+    .parte1segundaSessao {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 120vh;
+    }
+    .containerInfoParte1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        height: 120vh;
+        width: 90%;
+    }
+
+    .comeceAjogar {
+        position: static;
+        width: 75%;
+        height: 48vh;
+    }
+
+    .comeceAjogar h2 {
+        font-size: 30px;
+    }
+
+    .comeceAjogar p {
+        font-size: 20px;
+        width: 85%;
+    }
+    .comeceAjogar button {
+        font-size: 20px;
+    }
+    .comeceAjogar h5 {
+        text-align: center;
+    }
+    .sobreOjogo {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        width: 100%;
+        height: 65vh;
+    }
+    .sobreOjogo div{
+        width: 100%;
+        height: 25vh;
+    }
+    .sobreOjogo h2{
+        font-size: 25px;
+        height: auto;
+    }
+    .sobreOjogo p{
+        font-size: 18px;
+        width: 100%;
+        background-color: #FFF;
+        border-radius: 40px;
+    }
+    .sobreOjogoCapa {
+        width: 10vw;
+        height: 5vh;
+        margin: 0;
+    }
+}
+
+/* Respondividade  para telas de NoteBook ou telas menores.*/
+@media (min-width: 770px) and (max-width: 1300px) {
+    .comeceAjogar {
+        height: 64vh;
+        width: 25vw;
+    }
+    .sobreOjogo {
+        align-items: center;
+    }
+    .sobreOjogo div{
+        height: 40vh;
+        width: 50%;
+    }
+    .sobreOjogo h2{
+        font-size: 30px;
+    }
+    .sobreOjogo p{
+        font-size: 20px;
+    }
+    .sobreOjogoCapa {
+        width: 40%;
+        margin-left: 10px;
+    }
+}
+
+/* Segunda parte */
 
 .parte2segundaSessao {
     display: flex;
@@ -202,6 +317,95 @@
     background-color: #D74430;
     color: #FFF;
 }
+ /* Responsividade para celulares Apple */
+
+@media (max-width: 768px) and (min-width: 400px) {
+    .parte2segundaSessao {
+        display: flex;
+        justify-content: center;
+    }
+    .parte2segundaSessao div {
+        width: 95%;
+    }
+    .sish {
+        width: 50vw;
+    }
+    .rey {
+        width: 25vw;
+    }
+    .estruturaDoJogo {   
+        height: 25vh;
+        top: 1300px;
+        right: 23%;
+    }
+    .estruturaDoJogo h2 {
+        font-size: 20px;
+        width: 40%;
+        padding: 6px 0;
+    }
+    .estruturaDoJogo li {
+        font-size: 10px;
+        height: 3vh;
+        padding: 5px 2px;
+    }
+}
+ /* Responsividade para celulares Android */
+@media (max-width: 400px) {
+    .parte2segundaSessao {
+        display: flex;
+        justify-content: center;
+    }
+    .parte2segundaSessao div {
+        width: 95%;
+    }
+    .sish {
+        width: 50vw;
+    }
+    .rey {
+        width: 25vw;
+    }
+    .estruturaDoJogo h2 {
+        font-size: 20px;
+        width: 40%;
+        padding: 6px 0;
+    }
+    .estruturaDoJogo li {
+        font-size: 10px;
+        height: 3vh;
+        padding: 5px 2px;
+    }
+    .estruturaDoJogo {
+        height: 25vh;
+        top: 1200px;
+        right: 23%;
+    }
+}
+
+/* Respondividade  para telas de NoteBook ou telas menores.*/
+@media (min-width: 770px) and (max-width: 1300px) {
+    .parte2segundaSessao div {
+        width: 90%;
+    }
+    .sish {
+        width: 45vw;
+    }
+    .rey {
+        width: 22vw;
+    }
+    .estruturaDoJogo {
+        top: 1350px;
+    }
+    .estruturaDoJogo h2 {
+        width: 40%;
+        padding: 10px;
+    }
+    .estruturaDoJogo li {
+        height: 5.5vh;
+        padding: 0;
+    }
+}
+
+/* TERCEIRA SESSÃO */
 
 .terceiraSessao {
     display: flex;
@@ -276,6 +480,10 @@
     background-size: cover;
 }
 
+.divHierarquia {
+    text-align: center;
+}
+
 .hierarquia {
     width: 90%;
 }
@@ -294,6 +502,81 @@
 .normasText p {
     width: 50%;
 }
+
+@media (max-width: 768px){
+    .terceiraSessao{
+        height: 160vh;
+        justify-content: space-between;
+    }
+    .atributos h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        margin: 20px;
+    }
+    .atributosImgs {
+        flex-direction: column;
+        align-items: center;
+        height: 105vh;
+    }
+    .img1atributos{
+        width: 90%;
+    }
+    .outrasImgsAtributos{
+        flex-direction: column;
+        height: 80vh;
+        flex-wrap: nowrap;
+        width: 90%;
+    }
+    .outrasImgsAtributos div {
+        width: 100%;
+        height: 60vh;
+    }
+    .normasText{
+        font-size: 10px;
+        width: 100%;
+    }
+    .normasText p{
+        width: 80%;
+    }
+    .hierarquia {
+        width: 100%;
+    }
+
+    .novosGraficos {
+        width: 90%;
+        position: absolute;
+        left: 5%;
+        top: 1840px;
+    }
+}
+
+/* Respondividade  para telas de NoteBook ou telas menores.*/
+@media (min-width: 770px) and (max-width: 1300px) {
+    .novosGraficos {
+        width: 26vw;
+        left: 48.5%;
+        top: 2090px;
+    }
+    .img1atributos {
+        height: 50vh;
+    }
+    .outrasImgsAtributos {
+        height: 50vh;
+    }
+    .divHierarquia {
+        height: 110vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .normasText p {
+        width: 90%;
+    }
+}
+
+/* QUARTA SESSÃO:  Como Jogar */
 
 .quartaSessao {
     display: flex;
@@ -369,6 +652,91 @@
     border-bottom: solid 5px #D74430;
 }
 
+/* Responsividade para Android */
+@media (max-width: 768px) {
+    .quartaSessao h2 {
+        height: 10vh;
+        justify-content: end;
+        font-size: 20px; 
+        padding-right: 40px;     
+    } 
+    .quartaSessaoOpcoes img {
+        width: 115vw;
+        position: absolute;
+        bottom: 0;
+        top: 2660px;
+        right: 32%;
+    }
+    .quartaSessaoOpcoes {
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: space-evenly;
+        padding-right: 0;
+    }
+    .quartaSessaoOpcoes div {
+        width: 60%;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .quartaSessaoOpcoes h3 {
+        font-size: 30px;
+    }
+    
+    .quartaSessaoOpcoes button {
+        width: 70%;
+        height: 6vh;
+        font-size: 16px;
+        background-color: #000;
+        color: #FFF;
+        cursor: pointer;
+    }
+    .quartaSessaoOpcoes p {
+        font-size: 18px;
+        width: 70%;
+        text-align: center;
+    }
+}
+
+/* Responsividade celulares Apple */
+@media (max-width: 768px) and (min-width: 400px) {
+    .quartaSessaoOpcoes img {
+        width: 105vw;
+        position: absolute;
+        bottom: 0;
+        top: 2920px;
+        right: 36%;
+    } 
+}
+
+/* Respondividade  para telas de NoteBook ou telas menores.*/
+@media (min-width: 770px) and (max-width: 1300px) {
+    .quartaSessao h2{
+        justify-content: end;
+        padding-right: 17rem;
+    }
+    .quartaSessaoOpcoes img {
+        width: 39vw;
+        position: relative;
+        bottom: 13vh;
+        right: 3%;
+    }
+    .quartaSessaoOpcoes div {
+        height: 60vh;
+    }
+    .quartaSessaoOpcoes p {
+        width: 90%;
+        height: 10vh;
+    }
+}
+
+/* QUINTA SESSÃO */
+
 .quintaSessaoInformacoes {
     width: 65%;
     height: 90vh;
@@ -423,4 +791,89 @@
     position: absolute;
     right: 8vw;
     top: 635vh;
+}
+
+@media (max-width: 768px) {
+    .quintaSessaoInformacoes {
+        width: 100%;
+        height: 110vh;
+        justify-content: start;
+        padding-top: 40px;
+    }
+    .quintaSessaoInformacoes div {
+        width: 100%;
+        height: 40vh;
+        align-items: center;
+        font-size: 30px;
+    }
+    .quintaSessaoInformacoes img {
+        width: 95%;
+    }
+    .quintaSessaoInformacoes p {
+        width: 90%;
+        color: #FFF;
+        font-size: 22px;
+        text-align: start;
+    }
+    .informacoesAplicativo div {
+        text-align: center;
+        width: 90%;
+        height: 10vh;
+    }
+    .politicas img{
+        width: 50%;
+    }
+    .darthVader {
+        width: 100vw;
+        right: 0%;
+        top: 515vh;
+    }
+    .referencia {
+        width: 90%;
+        position: absolute;
+        right: 2%;
+        top: 580vh;
+        font-size: 14px;
+        padding-bottom: 2.5rem;
+    }
+}
+
+/* Respondividade  para telas de NoteBook ou telas menores.*/
+@media (min-width: 770px) and (max-width: 1300px) {
+    .quintaSessaoInformacoes {
+        width: 70%;
+        height: 100vh;
+        justify-content: center;
+    }
+    .quintaSessaoInformacoes div {
+        width: 80%;
+        height: 45vh;
+        font-size: 40px;
+    }
+    .quintaSessaoInformacoes p {
+        font-size: 24px;
+        width: 85%;
+    }
+    .informacoesAplicativo div{
+        display: flex;
+        align-items: end;
+        height: 12vh;
+        width: 75%;
+    }
+    .darthVader {
+        width: 50vw;
+        right: -5%;
+        top: 528vh;
+        overflow: hidden;
+    }
+    .referencia {
+        width: 30%;
+        right: -2%;
+        top: 620vh;
+        font-size: 14px;
+        height: 10vh;
+        display: flex;
+        align-items: end;
+        overflow: hidden;
+    }
 }
